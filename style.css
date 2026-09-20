@@ -333,3 +333,22 @@ ADAPTATION TÉLÉPHONE
 }
 
 }
+/* =========================
+   ANIMATION DE LA CARTE
+   ========================= */
+
+.hero-card {
+    animation: cardAppear 1s ease-out;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
