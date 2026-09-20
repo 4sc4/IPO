@@ -70,74 +70,80 @@ SECTION PRINCIPALE
 ========================= */
 
 .hero {
-min-height: 100vh;
+    min-height: 100vh;
 
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-position: relative;
-overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-background:
-    linear-gradient(
-        125deg,
-        #087443 0%,
-        #087443 48%,
-        #b31322 48%,
-        #b31322 100%
-    );
-
+    background:
+        linear-gradient(
+            125deg,
+            #b31322 0%,
+            #b31322 48%,
+            #087443 48%,
+            #087443 100%
+        );
 }
 
 /* =========================
 ÉTOILE
 ========================= */
 
-.star {
-position: absolute;
+.ipo-title {
+    position: relative;
+    display: inline-block;
+}
 
-top: 50%;
-left: 50%;
+.ipo-title .star {
+    position: absolute;
 
-font-size: 110px;
-color: #f5d000;
+    top: 50%;
+    left: 68%;
 
-opacity: 0.9;
+    transform: translate(-50%, -50%);
 
-transform: rotate(-12deg);
+    font-size: 0.65em;
+    color: #f5d000;
 
-text-shadow:
-    0 0 25px rgba(245, 208, 0, 0.25);
+    z-index: 0;
 
+    opacity: 0.9;
+
+    text-shadow:
+        0 0 20px rgba(245, 208, 0, 0.25);
+
+    animation: starFloat 4s ease-in-out infinite;
+}
+
+.ipo-title {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes starFloat {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(-50%, -55%) rotate(5deg);
+    }
 }
 
 /* =========================
 CARTE EN VERRE
 ========================= */
 
-.hero-card {
-width: min(90%, 650px);
+.hero-card h1 {
+    position: relative;
+}
 
-padding: 55px 45px;
-
-text-align: center;
-
-background: rgba(10, 20, 18, 0.58);
-
-border: 1px solid rgba(255, 255, 255, 0.18);
-
-border-radius: 28px;
-
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-
-box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.35);
-
-position: relative;
-z-index: 2;
-
+.hero-card h1 .star {
+    z-index: -1;
 }
 
 /* =========================
