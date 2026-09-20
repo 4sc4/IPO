@@ -1,0 +1,258 @@
+/* =========================================================
+   BASE DU SITE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   FOND PRINCIPAL IPO
+   ========================================================= */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c91520 0%,
+            #c91520 48%,
+            #087a3d 52%,
+            #087a3d 100%
+        );
+
+    padding: 30px 20px;
+}
+
+
+/* =========================================================
+   ÉTOILE JAUNE
+   ========================================================= */
+
+.page::before {
+    content: "★";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: min(45vw, 420px);
+
+    color: #f5c400;
+
+    opacity: 0.12;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARTE PRINCIPALE
+   ========================================================= */
+
+.carte {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(90%, 500px);
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: rgba(15, 20, 20, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   ÉTOILE DANS LA CARTE
+   ========================================================= */
+
+.etoile {
+    color: #f5c400;
+
+    font-size: 55px;
+
+    margin-bottom: 5px;
+
+    text-shadow:
+        0 0 20px rgba(245, 196, 0, 0.35);
+}
+
+
+/* =========================================================
+   TITRE IPO
+   ========================================================= */
+
+h1 {
+    color: white;
+
+    font-size: clamp(60px, 15vw, 90px);
+
+    font-weight: 900;
+
+    letter-spacing: 8px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   SLOGAN
+   ========================================================= */
+
+.slogan {
+    margin-top: 18px;
+
+    color: #f5c400;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+    margin: 25px auto 30px;
+
+    max-width: 400px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOUTON TÉLÉCHARGEMENT
+   ========================================================= */
+
+.bouton {
+    border: none;
+
+    padding: 16px 28px;
+
+    border-radius: 50px;
+
+    background: #f5c400;
+
+    color: #151515;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Effet lorsque le doigt / curseur passe dessus */
+
+.bouton:hover {
+    transform: translateY(-3px);
+
+    background: #ffd52a;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Effet lorsque le bouton est pressé */
+
+.bouton:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   ADAPTATION AUX PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .page {
+        padding: 20px 15px;
+    }
+
+    .carte {
+        width: 100%;
+
+        padding: 40px 22px;
+
+        border-radius: 24px;
+    }
+
+    .etoile {
+        font-size: 45px;
+    }
+
+    .slogan {
+        font-size: 17px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .bouton {
+        width: 100%;
+    }
+}
