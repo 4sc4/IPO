@@ -1,7 +1,9 @@
-// =========================================================
-// SITE IPO
-// =========================================================
-// Ce fichier servira à gérer les interactions du site.
-// =========================================================
+const downloadButton = document.getElementById("downloadButton");
 
-console.log("Site IPO chargé avec succès.");
+downloadButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    alert("L'application sera bientôt disponible au téléchargement.");
+
+});
