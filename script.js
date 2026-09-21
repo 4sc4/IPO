@@ -1,9 +1,28 @@
-const downloadButton = document.getElementById("downloadButton");
+const downloadCount = document.getElementById("downloadCount");
 
-downloadButton.addEventListener("click", function(event) {
+async function afficherTelechargements() {
+    try {
+        const response = await fetch(
+            "https://api.github.com/repos/4sc4/IPO/releases/latest"
+        );
 
-    event.preventDefault();
+        if (!response.ok) {
+            throw new Error("Aucune release trouvée");
+        }
 
-    alert("L'application sera bientôt disponible au téléchargement.");
+        const release = await response.json();
 
-});
+        const apk = release.assets.find(
+            asset => asset.name.toLowerCase() === "ipo.apk"
+        );
+
+        if (apk) {
+            downloadCount.textContent =
+                apk.download_count.toLocaleString("fr-FR");
+        }
+    } catch (error) {
+        console.log("Compteur :", error.message);
+    }
+}
+
+afficherTelechargements();
