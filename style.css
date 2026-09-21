@@ -453,4 +453,15 @@ font-size: 13px;
 .reseaux a:active {
     transform: scale(0.92);
 }
+.reseaux a:hover {
+    transform: translateY(-4px);
+    background: rgba(212, 175, 55, 0.15) !important;
+    box-shadow:
+        0 0 20px rgba(212, 175, 55, 0.55),
+        inset 0 0 10px rgba(255, 255, 255, 0.08) !important;
+}
+
+.reseaux a:active {
+    transform: scale(0.92);
+}
 }
