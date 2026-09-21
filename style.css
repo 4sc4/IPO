@@ -1,6 +1,4 @@
-/* =========================
-RÉINITIALISATION
-========================= */
+
 
 * {
   margin: 0;
@@ -18,9 +16,7 @@ color: white;
 background: #071b13;
 }
 
-/* =========================
-EN-TÊTE
-========================= */
+
 
 .header {
 position: absolute;
@@ -65,9 +61,7 @@ transition: opacity 0.3s;
 opacity: 0.65;
 }
 
-/* =========================
-SECTION PRINCIPALE
-========================= */
+
 
 .hero {
     min-height: 100vh;
@@ -89,9 +83,7 @@ SECTION PRINCIPALE
         );
 }
 
-/* =========================
-ÉTOILE
-========================= */
+
 
 .ipo-title {
     position: relative;
@@ -134,9 +126,7 @@ SECTION PRINCIPALE
     }
 }
 
-/* =========================
-CARTE EN VERRE
-========================= */
+
 
 .hero-card h1 {
     position: relative;
@@ -146,9 +136,7 @@ CARTE EN VERRE
     z-index: -1;
 }
 
-/* =========================
-TEXTES
-========================= */
+
 
 .small-title {
 font-size: 13px;
@@ -194,9 +182,7 @@ color: rgba(255, 255, 255, 0.78);
 
 }
 
-/* =========================
-BOUTON TÉLÉCHARGEMENT
-========================= */
+
 
 .download-button {
 display: inline-block;
@@ -236,9 +222,7 @@ color: rgba(255, 255, 255, 0.55);
 
 }
 
-/* =========================
-SECTION À PROPOS
-========================= */
+
 
 .about {
 min-height: 45vh;
@@ -273,9 +257,7 @@ color: rgba(255, 255, 255, 0.7);
 
 }
 
-/* =========================
-PIED DE PAGE
-========================= */
+
 
 footer {
 padding: 25px;
@@ -290,9 +272,7 @@ font-size: 13px;
 
 }
 
-/* =========================
-ADAPTATION TÉLÉPHONE
-========================= */
+/
 
 @media (max-width: 600px) {
 
@@ -339,10 +319,6 @@ ADAPTATION TÉLÉPHONE
 }
 
 }
-/* =========================
-   ANIMATION DE LA CARTE
-   ========================= */
-
 .hero-card {
     animation: cardAppear 1s ease-out;
 }
@@ -407,5 +383,35 @@ ADAPTATION TÉLÉPHONE
     text-align: center;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.6);
+}
+.reseaux {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.reseaux a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1877F2;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.reseaux a:hover {
+    transform: translateY(-3px);
+    background: #0d65d9;
+}
+
+.reseaux a:active {
+    transform: scale(0.92);
 }
 }
