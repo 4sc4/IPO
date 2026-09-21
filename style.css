@@ -414,4 +414,39 @@ font-size: 13px;
 .reseaux a:active {
     transform: scale(0.92);
 }
+.reseaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.reseaux a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1877F2;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.reseaux img {
+    width: 21px;
+    height: 21px;
+    display: block;
+}
+
+.reseaux a:hover {
+    transform: translateY(-3px);
+    background: #0d65d9;
+}
+
+.reseaux a:active {
+    transform: scale(0.92);
+}
 }
