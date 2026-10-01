@@ -272,8 +272,6 @@ font-size: 13px;
 
 }
 
-/
-
 @media (max-width: 600px) {
 
 .header {
@@ -360,7 +358,7 @@ font-size: 13px;
     50% {
         box-shadow: 0 0 22px rgba(245, 208, 0, 0.25);
     }
-}. 
+}
 .about h2,
 .about p {
     animation: aboutAppear 1s ease-out;
@@ -376,6 +374,7 @@ font-size: 13px;
         opacity: 1;
         transform: translateY(0);
     }
+}
   footer {
     position: absolute;
     bottom: 15px;
